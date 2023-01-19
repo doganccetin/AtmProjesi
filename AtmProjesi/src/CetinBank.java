@@ -1,9 +1,8 @@
-import java.sql.SQLOutput;
 import java.util.Scanner;
 public class CetinBank {
     public static void main(String[] args) {
 
-        Scanner input = new Scanner(System.in);
+       Scanner input = new Scanner(System.in);
         String kullaniciAdi, sifre;
         int kalanHak = 3;
         long bakiye = 100000000;
@@ -21,8 +20,8 @@ public class CetinBank {
                 do
                 {
                     System.out.println("Lütfen Yapmak İstediğiniz İşlemi Seçiniz...");
-                    System.out.println("1-Para Çekme\n" +
-                            "2-Para Yatırma\n" +
+                    System.out.println("1-Para Yatırma\n" +
+                            "2-Para Çekme\n" +
                             "3-Bakiye Sorgula\n" +
                             "4-Çıkış Yap");
                     secenek = input.nextInt();
@@ -48,6 +47,7 @@ public class CetinBank {
                             break;
                         case 3:
                             System.out.println("Güncel Bakiye: " + bakiye);
+                            kalanHak = 0;
                             break;
                         case 4:
                             System.out.println("Tekrar Görüşmek Üzere...");
